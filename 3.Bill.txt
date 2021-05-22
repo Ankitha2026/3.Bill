@@ -1,0 +1,22 @@
+#Problem 3:
+#Write a program to calculate the EB Bill.
+
+#The tariff rate for all division is the same. Karnataka electricity board single slaps for the domestic LT supply such as for 0 to 30 units the per-unit cost will be ? 3.75/-, from 31 to 100 the per-unit cost will be ? 5.20, from 101 to 200, the per-unit cost will be ? 6.75 and above 201 units you have to pay ? 7.8 per unit.
+#Additionally, the consumer will pay fixed charges as ? 60/- and electricity tax of 5% extra.
+
+units=int(input("please enter the number of units you consumed in a month"))
+if(0<=units<=30):
+    payAmount=units*3.75+(5/100)
+    fixed_charge=60
+elif(31<=units<=100):
+    payAmount=units*5.20+(5/100)
+    fixed_charge=60
+elif(101<=units<=200):
+    payAmount=units*6.75+(5/100)
+    fixed_charge=60
+elif(units>=201):
+    payAmount=units*7.8+(5/100)
+    fixed_charge=60
+
+Total=payAmount+fixed_charge
+print("\nElecticity bill=%.2f" %Total)
